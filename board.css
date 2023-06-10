@@ -1,0 +1,89 @@
+/* row */
+.pufu-board-row1 {
+  display : grid;
+  grid-template-columns : auto 1000px auto;
+  grid-template-rows : auto;
+  padding-top : 50px;
+}
+
+.pufu-board-row2 {
+  display : grid;
+  grid-template-columns : auto 1000px auto;
+  grid-template-rows : auto;
+  padding-top : 30px;
+}
+
+.pufu-board-row3 {
+  display : grid;
+  grid-template-columns : auto 1000px auto;
+  grid-template-rows : auto;
+  padding-top : 10px;
+}
+
+.pufu-board-row4 {
+  display : grid;
+  grid-template-columns : auto 1000px auto;
+  grid-template-rows : auto;
+  padding-top : 10px;
+  padding-bottom : 30px;
+}
+
+
+/* table */
+.text {
+  text-align : center;
+  color : black;
+}
+
+table {
+  border-top : 4px solid #777;
+  border-bottom : 4px solid #777;
+  border-collapse : collapse;
+}
+
+td {
+  border-top : 2px solid #777;
+}
+
+th, td {
+  padding : 5px;
+}
+
+th {
+  background-color : #ddd;
+}
+
+a {
+  text-decoration-line : none;
+  color : black;
+}
+
+
+/* button */
+.page-button {
+  border : none;
+  background-color : #ccc;
+  width : 25px;
+  height : 25px;
+}
+
+.page-button-onclick {
+  border : none;
+  background-color : black;
+  color : white;
+  width : 25px;
+  height : 25px;
+}
+
+.title-input {
+  border : none;
+  background-color : white;
+  text-align : center;
+}
+
+.no-input {
+  border : none;
+  background-color : white;
+  text-align : center;
+  width : 30px;
+}

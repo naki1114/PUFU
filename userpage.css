@@ -1,0 +1,49 @@
+/* row */
+.pufu-info-row1 {
+  display : grid;
+  grid-template-columns : auto 1000px auto;
+  grid-template-rows : auto;
+}
+
+
+/* user info box */
+.info-box {
+  display : flex;
+  align-items : center;
+  justify-content : center;
+  width : 500px;
+  height : auto;
+  border : 2px solid #000;
+  margin-top : 100px;
+  padding : 20px;
+}
+
+.span-location {
+  display : flex;
+  justify-content : center;
+  align-items : center;
+}
+
+
+/* button */
+.logout-button {
+  border : none;
+  width : 150px;
+  height : 30px;
+}
+
+.withdraw-button {
+  border : none;
+  width : 150px;
+  height : 30px;
+}
+
+.logout-button:hover {
+  color : #000!important;
+  background-color : #ccc!important;
+}
+
+.withdraw-button:hover {
+  color : #000!important;
+  background-color : #ccc!important;
+}

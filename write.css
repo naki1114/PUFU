@@ -1,0 +1,53 @@
+/* row */
+.pufu-write-row1 {
+  display : grid;
+  grid-template-columns : auto 1000px auto;
+  grid-template-rows : auto;
+  padding-top : 50px;
+}
+
+.pufu-write-row2 {
+  display : grid;
+  grid-template-columns : auto 800px auto;
+  grid-template-rows : auto;
+  padding-top : 50px;
+}
+
+
+/* textarea */
+.textarea-title {
+  font-size : 20px;
+  resize : none;
+  width : 800px;
+}
+
+.textarea-content {
+  font-size : 15px;
+  resize : none;
+  width : 800px;
+  height : 500px;
+}
+
+.textarea-position {
+  align-items : center;
+  justify-content : center;
+}
+
+
+/* button */
+.regist-button {
+  border : none;
+  width : 150px;
+  height : 30px;
+}
+
+.regist-button:hover {
+  color : #000!important;
+  background-color : #ccc!important;
+}
+
+.cancel-button {
+  border : none;
+  width : 150px;
+  height : 30px;
+}

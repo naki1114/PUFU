@@ -1,0 +1,40 @@
+/* row */
+.pufu-read-row1 {
+  display : grid;
+  grid-template-columns : auto 1000px auto;
+  grid-template-rows : auto;
+  padding-top : 50px;
+}
+
+.pufu-read-row2 {
+  display : grid;
+  grid-template-columns : auto 1000px auto;
+  grid-template-rows : auto;
+  padding-top : 50px;
+}
+
+
+/* table */
+.text {
+  color : black;
+}
+
+table {
+  border-top : 4px solid #777;
+  border-bottom : 4px solid #777;
+  border-collapse : collapse;
+  width : 1000px;
+  min-height : 500px;
+}
+
+td {
+  border-top : 2px solid #777;
+}
+
+th, td {
+  padding : 5px;
+}
+
+th {
+  background-color : #ddd;
+}

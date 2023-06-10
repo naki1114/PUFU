@@ -1,0 +1,33 @@
+/* row */
+.pufu-main-row1 {
+  display : grid;
+  grid-template-columns : auto 400px 400px 400px auto;
+  grid-template-rows : auto;
+  margin-top : 30px;
+  padding-left : 10px;
+  padding-right : 10px;
+}
+
+.pufu-main-row2 {
+  display : grid;
+  grid-template-columns : auto 400px 400px 400px auto;
+  grid-template-rows : auto;
+  margin-top : 30px;
+  padding-left : 10px;
+  padding-right : 10px;
+}
+
+
+/* table */
+table {
+  border-top : 4px solid #777;
+  border-bottom : 4px solid #777;
+  border-collapse : collapse;
+  width : 380px;
+  padding-left : 10px;
+  padding-right : 10px;
+}
+
+td {
+  border-top : 2px solid #777;
+}
