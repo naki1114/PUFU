@@ -27,7 +27,7 @@
     $count = mysqli_num_rows($data);
 
     // 페이지당 게시글 개수
-    $per_page = 10;
+    $per_page = 30;
 
     if ($count % $per_page == 0) {
       $total_page = $count / $per_page;
