@@ -78,7 +78,7 @@
               $title = $board['title'];
               $nickname = $board['nickname'];  ?>
               <tr>
-                <form method="post">
+                <form method="get">
                   <td>
                     <input type="text" class="no-input" name="no" value="<?php echo $no;?>" readonly>
                   </td>
