@@ -63,17 +63,18 @@ a {
 .page-button {
   border : none;
   background-color : #ccc;
-  width : 25px;
-  min-height : 25px;
+  width : auto;
+  height : 25px;
+  min-width : 25px;
 }
 
 .page-button-onclick {
   border : none;
   background-color : black;
   color : white;
-  width : 25px;
-  height : auto;
-  min-height : 25px;
+  width : auto;
+  height : 25px;
+  min-width : 25px;
 }
 
 .title-input {
