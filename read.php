@@ -15,8 +15,29 @@
 
     $_SESSION["page"] = "board.php";
 
+    $no = $_GET["no"];
     $title = $_GET["title"];
     $nickname = $_GET["nickname"];
+
+    $get_bulletin = "SELECT * FROM bulletin;";
+    $bulletin_query = mysqli_query($connect, $get_bulletin);
+
+    $count = mysqli_num_rows($bulletin_query);
+
+    $get_content = "SELECT * FROM bulletin WHERE nickname = '$nickname' AND title = '$title';";
+    $content_query = mysqli_query($connect, $get_content);
+
+    $read = mysqli_fetch_assoc($content_query);
+    $content = $read['content'];
+
+    $check_bulletin = "SELECT * FROM bulletin WHERE num = $no;";
+    $check_query = mysqli_query($connect, $check_bulletin);
+
+    $check = mysqli_fetch_assoc($check_query);
+
+    if ($title == $check['title'] && $content == $check['content'] && $nickname == $check['nickname']) {
+      $read_bulletin = 1;
+    }
   ?>
 
   <body>
@@ -27,6 +48,8 @@
       <span>&nbsp;</span>
     </div>
 
+<?php
+  if ($read_bulletin == 1) {  ?>
     <div class="pufu-read-row2">
       <span>&nbsp;</span>
       <span>
@@ -43,12 +66,6 @@
             <tr>
               <td>
               <?php
-                $get_content = "SELECT * FROM bulletin WHERE nickname = '$nickname' AND title = '$title';";
-                $content_query = mysqli_query($connect, $get_content);
-
-                $read = mysqli_fetch_assoc($content_query);
-                $content = $read['content'];
-
                 echo $content;
               ?>
               </td>
@@ -72,7 +89,17 @@
       </span>
       <span>&nbsp;</span>
     </div>
-<?php } ?>
+<?php }
+  }
+  else { ?>
+    
+    <div class="pufu-read-row2">
+      <span>&nbsp;</span>
+      <span><h2>존재하지 않는 게시글입니다.</h2></span>
+      <span>&nbsp;</span>
+    </div>
+
+<?php }  ?>
 
   </body>
 
