@@ -28,7 +28,6 @@
     else {
       $_SESSION["page_number"] = 1;
     }
-    echo $_SESSION["page_number"];
 
     $get_count = "SELECT * FROM bulletin;";
     $data = mysqli_query($connect, $get_count);
