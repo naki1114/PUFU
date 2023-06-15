@@ -15,13 +15,20 @@
 
     $_SESSION["page"] = "board.php";
 
-    if ($_POST["page_number"]) {
-      $_SESSION["page_number"] = $_POST["page_number"];
+    if ($_GET["page_number"]) {
+      $_SESSION["page_number"] = $_GET["page_number"];
     }
     else {
-      $_POST["page_number"] = 1;
-      $_SESSION["page_number"] = $_POST["page_number"];
+      $_SESSION["page_number"] = 1;
     }
+    
+    if ($_SESSION["page_number"]) {
+
+    }
+    else {
+      $_SESSION["page_number"] = 1;
+    }
+    echo $_SESSION["page_number"];
 
     $get_count = "SELECT * FROM bulletin;";
     $data = mysqli_query($connect, $get_count);
@@ -37,10 +44,10 @@
       $total_page = ($count - ($count % $per_page)) / $per_page + 1;
     }
 
-    if ($_POST["page_number"] == "last") {
+    if ($_GET["page_number"] == "last") {
       $_SESSION["page_number"] = $total_page;
     }
-    elseif ($_POST["page_number"] == "first") {
+    elseif ($_GET["page_number"] == "first") {
       $_SESSION["page_number"] = 1;
     }
   ?>
@@ -49,7 +56,7 @@
 
     <div class="pufu-board-row1">
       <span>&nbsp;</span>
-      <span><h2>◈ 페이징 테스트</h2></span>
+      <span><h2>◈ 자유게시판</h2></span>
       <span>&nbsp;</span>
     </div>
 
@@ -110,7 +117,7 @@
       <span>&nbsp;</span>
       <span>
         <div style="text-align:center;">
-        <form method="post">
+        <form method="get">
 <?php
         if ($_SESSION["page_number"] <= 5) {
           for ($num = 1; $num <= 9; $num++) {  
@@ -120,7 +127,7 @@
             else {  ?>
               <input type="submit" class="page-button" name="page_number" value="<?php echo $num;?>" formaction="board.php">
 <?php       }  ?>
-<?php     }  $_POST["page_number"] = null; $_SESSION["page_number"] = null;  ?>
+<?php     }  $_GET["page_number"] = null;  ?>
               <input type="submit" class="page-button" name="page_number" value="last" formaction="board.php">
 <?php
         }
@@ -135,7 +142,7 @@
             else {  ?>
               <input type="submit" class="page-button" name="page_number" value="<?php echo $num;?>" formaction="board.php">
 <?php       }  ?>
-<?php     }  $_POST["page_number"] = null; $_SESSION["page_number"] = null;
+<?php     }  $_GET["page_number"] = null;
         }
 
         else {  ?>
@@ -148,7 +155,7 @@
             else {  ?>
               <input type="submit" class="page-button" name="page_number" value="<?php echo $num;?>" formaction="board.php">
 <?php       }  ?>
-<?php     }  $_POST["page_number"] = null; $_SESSION["page_number"] = null;  ?>
+<?php     }  $_GET["page_number"] = null;  ?>
               <input type="submit" class="page-button" name="page_number" value="last" formaction="board.php">
 <?php
         }  ?>
