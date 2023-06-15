@@ -60,7 +60,7 @@
         else {  ?>
           <script>
             alert('비밀번호가 일치하지 않습니다.');
-            location.replace("join.php");
+            history.back();
           </script>
 <?php
         }
@@ -68,7 +68,7 @@
     else {  ?>
       <script>
         alert('<?php echo $pwCheck[1]; ?>');
-        location.replace("join.php");
+        history.back();
       </script>
 <?php
       }
@@ -76,7 +76,7 @@
     else {  ?>
       <script>
         alert('닉네임이 중복되었습니다.');
-        location.replace("join.php");
+        history.back();
       </script>
 <?php      
     }
@@ -84,7 +84,7 @@
   else {  ?>
     <script>
       alert('아이디가 중복되었습니다.');
-      location.replace("join.php");
+      history.back();
     </script>
 <?php
   }

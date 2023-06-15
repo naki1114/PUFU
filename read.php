@@ -91,7 +91,7 @@
       <span>
         <div>
           <button formaction="modify.php" class="modify-button indigo">수정</button>
-          <button onclick="location.href='deleteAction.php';" class="delete-button red">삭제</button>
+          <button formaction="deleteAction.php" class="delete-button red">삭제</button>
         </div>
       </span>
       <span>&nbsp;</span>

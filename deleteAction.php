@@ -3,8 +3,8 @@
 
   session_start();
 
-  $title = $_SESSION["title"];
-  $nickname = $_SESSION["nickname"];
+  $title = $_SESSION["ex_title"];
+  $nickname = $_SESSION["ex_nickname"];
   
   $delete = "DELETE FROM bulletin WHERE title = '$title' AND nickname = '$nickname';
              SET @CNT = 0;
