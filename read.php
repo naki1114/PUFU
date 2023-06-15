@@ -30,6 +30,11 @@
     $read = mysqli_fetch_assoc($content_query);
     $content = $read['content'];
 
+    $_SESSION["ex_no"] = $no;
+    $_SESSION["ex_title"] = $title;
+    $_SESSION["ex_content"] = $content;
+    $_SESSION["ex_nickname"] = $nickname;
+
     $check_bulletin = "SELECT * FROM bulletin WHERE num = $no;";
     $check_query = mysqli_query($connect, $check_bulletin);
 
@@ -47,6 +52,8 @@
       <span><h2>◈ 자유게시판</h2></span>
       <span>&nbsp;</span>
     </div>
+
+    <form method="post">
 
 <?php
   if ($read_bulletin == 1) {  ?>
@@ -83,7 +90,7 @@
       <span>&nbsp;</span>
       <span>
         <div>
-          <button onclick="location.href='modifyAction.php';" class="modify-button indigo">수정</button>
+          <button formaction="modify.php" class="modify-button indigo">수정</button>
           <button onclick="location.href='deleteAction.php';" class="delete-button red">삭제</button>
         </div>
       </span>
@@ -100,6 +107,8 @@
     </div>
 
 <?php }  ?>
+
+    </form>
 
   </body>
 
