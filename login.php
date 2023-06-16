@@ -11,6 +11,19 @@
 
   </head>
 
+  <?php
+    include_once 'connect.php';
+    
+    session_start();
+
+    if ($_SESSION["page"]) {
+
+    }
+    else {
+      $_SESSION["page"] = "index.php";
+    }
+  ?>
+
   <body>
     
     <div class="pufu-login-row1">
