@@ -1,0 +1,70 @@
+/* row */
+.pufu-shop-row1 {
+  display : grid;
+  grid-template-columns : auto 1000px auto;
+  grid-template-rows : auto;
+  padding-top : 50px;
+}
+
+.pufu-shop-row2 {
+  display : grid;
+  grid-template-columns : auto 300px 300px 300px 300px auto;
+  grid-template-rows : auto;
+  padding-top : 50px;
+}
+
+.pufu-shop-row3 {
+  display : grid;
+  grid-template-columns : auto 1000px auto;
+  grid-template-rows : auto;
+  padding-top : 50px;
+}
+
+.box-row {
+  display : grid;
+  grid-template-columns : auto;
+  grid-template-rows : 300px 50px 50px;
+}
+
+
+/* item box */
+.item-box {
+  display : grid;
+  grid-template-rows : 310px 30px 30px 30px;
+  justify-content : center;
+  align-items : center;
+  text-align : center;
+  width : 290px;
+  height : 410px;
+  border : 1px solid #777;
+  border-radius : 5px;
+  margin : 5px;
+}
+
+
+/* goods */
+.goods1 {
+  background-position : center;
+  background-size : 180px;
+  background-image : url("/goods/buds.png");
+  background-repeat : no-repeat;
+  height : 180px;
+}
+
+
+/* button */
+.shop-button{
+  border : none;
+  border-radius : 5px;
+  display : inline-block;
+  text-decoration : none;
+  text-align : center;
+  line-height : 30px;
+  width : 100px;
+  height : 30px;
+}
+
+.shop-button:hover{
+  color : #000!important;
+  background-color : #ccc!important;
+}
