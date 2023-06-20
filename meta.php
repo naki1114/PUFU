@@ -18,6 +18,12 @@
 
   <body>
 
+  <div class="pufu-meta-row1">
+      <span>&nbsp;</span>
+      <span><h2>◈ 메타</h2></span>
+      <span>&nbsp;</span>
+    </div>
+
   </body>
 
 </html>

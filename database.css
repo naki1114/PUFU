@@ -1,0 +1,43 @@
+/* row */
+.pufu-database-row1 {
+  display : grid;
+  grid-template-columns : auto 1000px auto;
+  grid-template-rows : auto;
+  padding-top : 50px;
+}
+
+.pufu-database-row2 {
+  display : grid;
+  grid-template-columns : auto 1000px auto;
+  grid-template-rows : auto;
+  padding-top : 5px;
+}
+
+
+/* slider */
+.slider {
+  -webkit-appearance : none;
+  outline : none;
+  border-radius : 5px;
+  width : 300px;
+  height : 10px;
+  background : #3f51b5;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance : none; /* 기본 CSS 스타일을 적용하지 않기 위해서 */
+  appearance : none; /* 기본 CSS 스타일을 적용하지 않기 위해서 */
+  width : 20px; /* 슬라이더 핸들 길이 */
+  height : 20px; /* 슬라이더 핸들 높이 */
+  border-radius : 50%; /* 핸들 모양을 원모양으로 만들기 위함 */
+  background : #3f51b5; /* 슬라이더 핸들 색상 */
+  cursor : pointer; /* 슬라이더 핸들에 마우스를 갖다대면 포인터로 변경 */
+}
+
+.slider::-moz-range-thumb {
+  width : 20px; /* 슬라이더 핸들 길이 */
+  height : 20px; /* 슬라이더 핸들 높이 */
+  border-radius : 50%; /* 핸들 모양을 원모양으로 만들기 위함 */
+  background : #3f51b5; /* 슬라이더 핸들 색상 */
+  cursor : pointer; /* 슬라이더 핸들에 마우스를 갖다대면 포인터로 변경 */
+}

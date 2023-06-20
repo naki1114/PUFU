@@ -1,0 +1,7 @@
+/* row */
+.pufu-meta-row1 {
+  display : grid;
+  grid-template-columns : auto 1000px auto;
+  grid-template-rows : auto;
+  padding-top : 50px;
+}
