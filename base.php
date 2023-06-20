@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="font.css">
-    <link rel="icon" href="PUFU Logo.png"/> 
+    <link rel="icon" href="/logo/PUFU Logo.png"/> 
     <!-- <link rel="apple-touch-icon" href="PUFU Logo.png"/>  -->
 
   </head>
@@ -29,32 +29,44 @@
     <!-- 이미지 -->
     <div class="pufu-row1">
         <span>
-          <div class="null-box">
-            <a href="index.php" class="pufu-logo">
-              <h2>Pokemon Unite</h2>
-              <h2>For You</h2>
-              <h1>포유뽀유</h1>
-            </a>
+          <div class="pufu-lbox-row">
+            <span>&nbsp;</span>
+            <span>
+              <div class="null-box">
+                <a href="index.php" class="pufu-logo">
+                  <h2>Pokemon Unite</h2>
+                  <h2>For You</h2>
+                  <h1>포유뽀유</h1>
+                </a>
+              </div>
+            </span>
+            <span>&nbsp;</span>
           </div>
         </span>
         <span class="pufu-img"></span>
         <span>
-          <div class="login-status-box">
+          <div class="pufu-rbox-row">
+            <span>&nbsp;</span>
+            <span>
+              <div class="login-status-box">
 <?php
-          if ($_SESSION["nickname"]) {  ?>
-            <span><?php echo $_SESSION["nickname"]; ?>님, 환영합니다.</span>
-            <span>
-              <button class="pufu-login-button indigo" onclick="location.href='userpage.php';">마이페이지</button>
+              if ($_SESSION["nickname"]) {  ?>
+                <span><?php echo $_SESSION["nickname"]; ?>님, 환영합니다.</span>
+                <span>
+                  <button class="pufu-login-button indigo" onclick="location.href='userpage.php';">마이페이지</button>
+                </span>
+                <span>&nbsp;</span>
+<?php         }
+              else {  ?>
+                <span>&nbsp;</span>
+                <span>
+                  <button class="pufu-login-button indigo" onclick="location.href='login.php';">로그인</button>
+                </span>
+                <span><a href="join.php" class="login-a">회원가입</a></span>
+<?php         }  ?>
+              </div>
             </span>
             <span>&nbsp;</span>
-<?php     }
-          else {  ?>
-            <span>&nbsp;</span>
-            <span>
-              <button class="pufu-login-button indigo" onclick="location.href='login.php';">로그인</button>
-            </span>
-            <span><a href="join.php" class="login-a">회원가입</a></span>
-<?php     }  ?>
           </div>
         </span>
     </div>
@@ -81,6 +93,9 @@
           </div>
           <div class="pufu-col s2">
             <a href="board.php" class="pufu-button indigo">게시판</a>
+          </div>
+          <div class="pufu-col s2">
+            <a href="shop.php" class="pufu-button indigo">상점</a>
           </div>
         </div>
       </span>
