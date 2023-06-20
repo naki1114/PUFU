@@ -37,21 +37,21 @@
 
 
 /* button */
-.join-button {
+.check-button {
   border : none;
   width : 150px;
   height : 30px;
 }
 
-.join-button:hover {
+.recheck-button {
+  border : none;
+  width : 80px;
+  height : 30px;
+}
+
+.check-button:hover, .recheck-button:hover {
   color : #000!important;
   background-color : #ccc!important;
-}
-
-.cancel-button {
-  border : none;
-  width : 150px;
-  height : 30px;
 }
 
 
